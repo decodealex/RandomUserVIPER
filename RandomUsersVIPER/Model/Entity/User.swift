@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Hashable {
     let name: Name
     let email: String
     let picture: Picture
 }
 
 extension User {
-    struct Name: Codable {
+    struct Name: Codable, Hashable {
         let title: String
         let first: String
         let last: String
@@ -22,7 +22,11 @@ extension User {
         var fullName: String { "\(title). \(first) \(last)"}
     }
     
-    struct Picture: Codable {
+    struct Picture: Codable, Hashable {
         let medium: URL
     }
+}
+
+struct UsersContainer: Codable {
+    let results: [User]
 }
