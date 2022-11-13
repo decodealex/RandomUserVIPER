@@ -7,14 +7,32 @@
 
 import SwiftUI
 
-struct DisclosureIndicatorRow: View {
+struct DisclosureIndicatorRow<Label: View>: View {
+    let action: () -> Void
+    @ViewBuilder let label: () -> Label
+    
+    @State var foregroundColor: Color = .black
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action, label: {
+            HStack {
+                label()
+                Spacer()
+                Image(systemName: "chevron.right")
+            }
+        })
+        .foregroundColor(foregroundColor)
+        .buttonStyle(.borderless)
     }
 }
 
 struct DisclosureIndicatorRow_Previews: PreviewProvider {
     static var previews: some View {
-        DisclosureIndicatorRow()
+        DisclosureIndicatorRow {
+            print("❗️DEBUG: Button tapped ")
+        } label: {
+            Text("Test Row")
+        }
+        
     }
 }
