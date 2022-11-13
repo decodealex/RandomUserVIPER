@@ -13,9 +13,11 @@ class UserListRouter: UserListRoutable {
     weak var viewController: UIViewController?
 
     static func buildModule() -> UIViewController {
+        let userRepository = UserRepository()
+        
         let presenter = UserListPresenter()
         let router = UserListRouter()
-        let interactor = UserListInteractor()
+        let interactor = UserListInteractor(userRepository: userRepository)
         
         let view = UserListView(presenter: presenter)
 
@@ -34,9 +36,11 @@ class UserListRouter: UserListRoutable {
     }
 
     static func buildModuleView() -> some View {
+        let userRepository = UserRepository()
+        
         let presenter = UserListPresenter()
         let router = UserListRouter()
-        let interactor = UserListInteractor()
+        let interactor = UserListInteractor(userRepository: userRepository)
         
         let view = UserListView(presenter: presenter)
 
@@ -50,4 +54,5 @@ class UserListRouter: UserListRoutable {
         
         return view
     }
+    
 }

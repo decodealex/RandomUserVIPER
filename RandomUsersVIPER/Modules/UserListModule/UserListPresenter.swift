@@ -17,18 +17,32 @@ final class UserListPresenter: UserListPresentable, UserListInteractableOutput {
     
     let objectWillChange = ObservableObjectPublisher()
     
-    @Published var data: [UserListData] = [] {
+    @Published var users: [User] = [] {
         willSet {
-            self.objectWillChange.send()
+                self.objectWillChange.send()
         }
     }
 
     func viewDidLoad() {
-        
+        setupViewController()
+        interactor.getUsers()
     }
     
     func viewDidAppear() {
         
+    }
+    
+    func received(_ users: [User]) {
+        DispatchQueue.main.async {
+            self.users = users
+        }
+    }
+    
+    func setupViewController() {
+        DispatchQueue.main.async {
+            self.router.viewController?.navigationController?.navigationBar.prefersLargeTitles = true
+            self.router.viewController?.title = "User List"
+        }
     }
 }
 

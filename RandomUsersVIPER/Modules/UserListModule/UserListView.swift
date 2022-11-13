@@ -12,10 +12,17 @@ struct UserListView<Presenter>: View where Presenter: UserListPresentable {
     @ObservedObject var presenter: Presenter
 
     var body: some View {
-        VStack {
-            Text("UserList")
+        List {
+            ForEach(presenter.users, id: \.self) { user in
+                DisclosureIndicatorRow {
+                    print("❗️DEBUG: Tapped ")
+                } label: {
+                    Text(user.name.fullName)
+                }
+            }
         }
         .onAppear {
+            print("❗️DEBUG: appeared ")
             self.presenter.viewDidAppear()
         }
 	}
@@ -26,7 +33,3 @@ struct UserListView_Previews: PreviewProvider {
         UserListRouter.buildModuleView()
     }
 }
-
-
-   
-

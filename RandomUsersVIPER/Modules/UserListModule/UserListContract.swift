@@ -14,25 +14,28 @@ protocol UserListPresentable: ObservableObject {
     var interactor: UserListInteractableInput! { get }
     var router: UserListRoutable! { get }
     
+    var users: [User] { get }
+    
     func viewDidLoad()
     func viewDidAppear()
 }
 
 /// Business logic and handles data requests and delegate transfer
-protocol UserListInteractableInput: class {
+protocol UserListInteractableInput: AnyObject {
     var output: UserListInteractableOutput! { get }
     
+    func getUsers()
 
 }
 
 /// Handles data response transfer
-protocol UserListInteractableOutput: class {
-    
+protocol UserListInteractableOutput: AnyObject {
+    func received(_ users: [User])
 
 }
 
 /// Handles navigation
-protocol UserListRoutable: class {
+protocol UserListRoutable: AnyObject {
     var viewController: UIViewController? { get }
     
 
