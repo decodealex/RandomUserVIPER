@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "randomusernetworkservice",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/decodealex/RandomUserNetworkService",
+      "state" : {
+        "branch" : "main",
+        "revision" : "9ff35d1a2292ff1fc6ceb041becedffc2dd2fda0"
+      }
+    }
+  ],
+  "version" : 2
+}

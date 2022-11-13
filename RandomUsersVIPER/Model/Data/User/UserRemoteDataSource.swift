@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RandomUserNetworkService
 
 protocol UserRemoteDataSourceProtocol {
     func getUserList(of count: Int) async throws -> [User]
