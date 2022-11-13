@@ -12,18 +12,26 @@ struct UserListView<Presenter>: View where Presenter: UserListPresentable {
     @ObservedObject var presenter: Presenter
 
     var body: some View {
-        List {
-            ForEach(presenter.users, id: \.self) { user in
-                DisclosureIndicatorRow {
-                    print("❗️DEBUG: Tapped ")
-                } label: {
-                    Text(user.name.fullName)
+        switch presenter.state {
+        case .loaded:
+            List {
+                ForEach(presenter.users, id: \.self) { user in
+                    Button {
+                        presenter.tappedOn(user)
+                    } label: {
+                        Text(user.name.fullName)
+                            .foregroundColor(.black)
+                    }
                 }
             }
-        }
-        .onAppear {
-            print("❗️DEBUG: appeared ")
-            self.presenter.viewDidAppear()
+        case .loading:
+            ProgressView("Loading data...")
+                .font(.title)
+                .onAppear {
+                    self.presenter.viewDidAppear()
+                }
+        case .error:
+            ErrorView()
         }
 	}
 }
@@ -33,3 +41,5 @@ struct UserListView_Previews: PreviewProvider {
         UserListRouter.buildModuleView()
     }
 }
+
+

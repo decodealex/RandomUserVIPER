@@ -32,6 +32,16 @@
 		5263BDA229206CD300640BF3 /* RandomUserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDA129206CD300640BF3 /* RandomUserError.swift */; };
 		5263BDA729207FD300640BF3 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDA629207FD300640BF3 /* AppRouter.swift */; };
 		5263BDAA29209F6300640BF3 /* DisclosureIndicatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDA929209F6300640BF3 /* DisclosureIndicatorRow.swift */; };
+		5263BDB22920AAF600640BF3 /* UserDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDAC2920AAF600640BF3 /* UserDetailsContract.swift */; };
+		5263BDB32920AAF600640BF3 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDAD2920AAF600640BF3 /* UserDetailsPresenter.swift */; };
+		5263BDB42920AAF600640BF3 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDAE2920AAF600640BF3 /* UserDetailsRouter.swift */; };
+		5263BDB52920AAF600640BF3 /* UserDetailsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDAF2920AAF600640BF3 /* UserDetailsData.swift */; };
+		5263BDB62920AAF600640BF3 /* UserDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDB02920AAF600640BF3 /* UserDetailsInteractor.swift */; };
+		5263BDB72920AAF600640BF3 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDB12920AAF600640BF3 /* UserDetailsView.swift */; };
+		5263BDBA2920B9C300640BF3 /* UserDetailRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDB92920B9C300640BF3 /* UserDetailRowModel.swift */; };
+		5263BDBD2920BC9C00640BF3 /* FormInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDBC2920BC9C00640BF3 /* FormInfoRow.swift */; };
+		5263BDC02920C0F000640BF3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDBF2920C0F000640BF3 /* ErrorView.swift */; };
+		5263BDC32920C34700640BF3 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDC22920C34700640BF3 /* LinkButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +91,16 @@
 		5263BDA129206CD300640BF3 /* RandomUserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserError.swift; sourceTree = "<group>"; };
 		5263BDA629207FD300640BF3 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		5263BDA929209F6300640BF3 /* DisclosureIndicatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclosureIndicatorRow.swift; sourceTree = "<group>"; };
+		5263BDAC2920AAF600640BF3 /* UserDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsContract.swift; sourceTree = "<group>"; };
+		5263BDAD2920AAF600640BF3 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
+		5263BDAE2920AAF600640BF3 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
+		5263BDAF2920AAF600640BF3 /* UserDetailsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsData.swift; sourceTree = "<group>"; };
+		5263BDB02920AAF600640BF3 /* UserDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsInteractor.swift; sourceTree = "<group>"; };
+		5263BDB12920AAF600640BF3 /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		5263BDB92920B9C300640BF3 /* UserDetailRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailRowModel.swift; sourceTree = "<group>"; };
+		5263BDBC2920BC9C00640BF3 /* FormInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInfoRow.swift; sourceTree = "<group>"; };
+		5263BDBF2920C0F000640BF3 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		5263BDC22920C34700640BF3 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +185,7 @@
 		5263BD762920643000640BF3 /* UserListModule */ = {
 			isa = PBXGroup;
 			children = (
+				5263BDBE2920BFC900640BF3 /* Mod */,
 				5263BD772920645000640BF3 /* UserListContract.swift */,
 				5263BD782920645000640BF3 /* UserListPresenter.swift */,
 				5263BD792920645000640BF3 /* UserListRouter.swift */,
@@ -258,6 +279,7 @@
 		5263BDA32920779F00640BF3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5263BDAB2920AAE000640BF3 /* UserDetailsModule */,
 				5263BD762920643000640BF3 /* UserListModule */,
 			);
 			path = Modules;
@@ -283,8 +305,40 @@
 			isa = PBXGroup;
 			children = (
 				5263BDA929209F6300640BF3 /* DisclosureIndicatorRow.swift */,
+				5263BDBC2920BC9C00640BF3 /* FormInfoRow.swift */,
+				5263BDBF2920C0F000640BF3 /* ErrorView.swift */,
+				5263BDC22920C34700640BF3 /* LinkButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5263BDAB2920AAE000640BF3 /* UserDetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				5263BDB82920B9A800640BF3 /* Models */,
+				5263BDAC2920AAF600640BF3 /* UserDetailsContract.swift */,
+				5263BDAD2920AAF600640BF3 /* UserDetailsPresenter.swift */,
+				5263BDAE2920AAF600640BF3 /* UserDetailsRouter.swift */,
+				5263BDAF2920AAF600640BF3 /* UserDetailsData.swift */,
+				5263BDB02920AAF600640BF3 /* UserDetailsInteractor.swift */,
+				5263BDB12920AAF600640BF3 /* UserDetailsView.swift */,
+			);
+			path = UserDetailsModule;
+			sourceTree = "<group>";
+		};
+		5263BDB82920B9A800640BF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5263BDB92920B9C300640BF3 /* UserDetailRowModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5263BDBE2920BFC900640BF3 /* Mod */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,23 +472,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				5263BD802920645000640BF3 /* UserListData.swift in Sources */,
+				5263BDB62920AAF600640BF3 /* UserDetailsInteractor.swift in Sources */,
 				5263BD822920645000640BF3 /* UserListView.swift in Sources */,
 				5263BD812920645000640BF3 /* UserListInteractor.swift in Sources */,
 				5263BD95292067DF00640BF3 /* User.swift in Sources */,
+				5263BDC02920C0F000640BF3 /* ErrorView.swift in Sources */,
 				5263BD862920649400640BF3 /* Endpoint.swift in Sources */,
 				5263BD8C2920658300640BF3 /* ErrorResponseModel.swift in Sources */,
+				5263BDB22920AAF600640BF3 /* UserDetailsContract.swift in Sources */,
+				5263BDB72920AAF600640BF3 /* UserDetailsView.swift in Sources */,
+				5263BDB52920AAF600640BF3 /* UserDetailsData.swift in Sources */,
 				5263BD8F292065B700640BF3 /* JSONDecoder.swift in Sources */,
 				5263BDA729207FD300640BF3 /* AppRouter.swift in Sources */,
 				5263BD47291EF72300640BF3 /* AppDelegate.swift in Sources */,
 				5263BD7D2920645000640BF3 /* UserListContract.swift in Sources */,
 				5263BD7F2920645000640BF3 /* UserListRouter.swift in Sources */,
 				5263BD7E2920645000640BF3 /* UserListPresenter.swift in Sources */,
+				5263BDB42920AAF600640BF3 /* UserDetailsRouter.swift in Sources */,
 				5263BD922920663E00640BF3 /* UserEndpoint.swift in Sources */,
+				5263BDB32920AAF600640BF3 /* UserDetailsPresenter.swift in Sources */,
 				5263BDAA29209F6300640BF3 /* DisclosureIndicatorRow.swift in Sources */,
+				5263BDBA2920B9C300640BF3 /* UserDetailRowModel.swift in Sources */,
 				5263BD88292064B100640BF3 /* NetworkError.swift in Sources */,
 				5263BD9F29206C7200640BF3 /* UserRepository.swift in Sources */,
 				5263BD8A292064D900640BF3 /* NetworkService.swift in Sources */,
+				5263BDBD2920BC9C00640BF3 /* FormInfoRow.swift in Sources */,
 				5263BD49291EF72300640BF3 /* SceneDelegate.swift in Sources */,
+				5263BDC32920C34700640BF3 /* LinkButton.swift in Sources */,
 				5263BDA229206CD300640BF3 /* RandomUserError.swift in Sources */,
 				5263BD9C29206B6700640BF3 /* UserRemoteDataSource.swift in Sources */,
 			);

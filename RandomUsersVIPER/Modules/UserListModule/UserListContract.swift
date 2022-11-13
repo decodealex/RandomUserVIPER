@@ -15,9 +15,12 @@ protocol UserListPresentable: ObservableObject {
     var router: UserListRoutable! { get }
     
     var users: [User] { get }
+    var state: UserListViewState { get }
     
     func viewDidLoad()
     func viewDidAppear()
+    
+    func tappedOn(_ user: User)
 }
 
 /// Business logic and handles data requests and delegate transfer
@@ -38,5 +41,5 @@ protocol UserListInteractableOutput: AnyObject {
 protocol UserListRoutable: AnyObject {
     var viewController: UIViewController? { get }
     
-
+    func presentUserDetailsSheet(for user: User)
 }

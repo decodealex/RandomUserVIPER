@@ -23,7 +23,7 @@ extension User {
     }
     
     struct Picture: Codable, Hashable {
-        let medium: URL
+        let large: URL
     }
 }
 

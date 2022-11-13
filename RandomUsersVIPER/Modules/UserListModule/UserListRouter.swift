@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 
 class UserListRouter: UserListRoutable {
+
     weak var viewController: UIViewController?
 
     static func buildModule() -> UIViewController {
@@ -53,6 +54,19 @@ class UserListRouter: UserListRoutable {
         presenter.viewDidLoad()
         
         return view
+    }
+    
+    func presentUserDetailsSheet(for user: User) {
+        let destinationVC = UserDetailsRouter.buildModule(for: user)
+        if let sheet = destinationVC.sheetPresentationController {
+             sheet.detents = [.medium(), .large()]
+             sheet.largestUndimmedDetentIdentifier = .medium
+             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
+             sheet.prefersEdgeAttachedInCompactHeight = true
+             sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
+            sheet.prefersGrabberVisible = true
+         }
+        viewController?.present(destinationVC, animated: true, completion: nil)
     }
     
 }
