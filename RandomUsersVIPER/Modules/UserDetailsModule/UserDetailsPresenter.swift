@@ -47,7 +47,13 @@ final class UserDetailsPresenter: UserDetailsPresentable, UserDetailsInteractabl
     }
     
     func tappedEmail() {
-        
+        guard let email = user?.email else { return }
+        do {
+            try router.presentEmailComposeView(for: email)
+        } catch {
+            print("❗️DEBUG: \(error) ")
+            router.displayAlertWith("'Mail' app is not configured", "Please add email account and try again🙂", buttonTitle: "Ok")
+        }
     }
     
 }

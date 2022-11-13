@@ -12,11 +12,17 @@ struct UserDetailsView<Presenter>: View where Presenter: UserDetailsPresentable 
     @ObservedObject var presenter: Presenter
 
     var body: some View {
-        Form {
-            userInfoView
-            Section(header: Text("User information:")) {
-                ForEach(presenter.rows, id: \.self) {
-                    FormInfoRow(title: $0.title, value: $0.value)
+        VStack(alignment: .center) {
+            imageView
+                .padding(.top, 20)
+            Form {
+                if let user = presenter.user {
+                    LinkButton(title: user.email, callback: presenter.tappedEmail)
+                }
+                Section(header: Text("User information:")) {
+                    ForEach(presenter.rows, id: \.self) {
+                        FormInfoRow(title: $0.title, value: $0.value)
+                    }
                 }
             }
         }
@@ -25,27 +31,20 @@ struct UserDetailsView<Presenter>: View where Presenter: UserDetailsPresentable 
         }
 	}
     
-    var userInfoView: some View {
-        return VStack(alignment: .leading, spacing: 5) {
-            AsyncImage(url: presenter.user?.picture.large) { image in
-                image
-                    .resizable()
-                    .frame(width: 100, height: 100)
-                    .cornerRadius(100/2)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 100 / 2)
-                            .stroke(.gray.opacity(0.7), lineWidth: 2)
-                        )
-            } placeholder: {
-                Image(systemName: "person.circle.fill")
-                    .renderingMode(.template)
-                    .foregroundColor(.gray.opacity(0.7))
-            }
-            .padding(.bottom, 5)
-            
-            if let user = presenter.user {
-                LinkButton(title: user.email, callback: presenter.tappedEmail)
-            }
+    var imageView: some View {
+        AsyncImage(url: presenter.user?.picture.large) { image in
+            image
+                .resizable()
+                .frame(width: 100, height: 100)
+                .cornerRadius(100/2)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 100 / 2)
+                        .stroke(.gray.opacity(0.7), lineWidth: 2)
+                )
+        } placeholder: {
+            Image(systemName: "person.circle.fill")
+                .renderingMode(.template)
+                .foregroundColor(.gray.opacity(0.7))
         }
     }
 }
@@ -56,7 +55,3 @@ struct UserDetailsView_Previews: PreviewProvider {
         UserDetailsRouter.buildModuleView(for: user)
     }
 }
-
-
-   
-

@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 import MessageUI
 
-class UserDetailsRouter: UserDetailsRoutable {
+class UserDetailsRouter: NSObject, UserDetailsRoutable {
     weak var viewController: UIViewController?
 
     static func buildModule(for user: User) -> UIViewController {
@@ -52,17 +52,30 @@ class UserDetailsRouter: UserDetailsRoutable {
         return view
     }
     
-//    func presentEmailComposeView(for email: String) throws {
-//        if MFMailComposeViewController.canSendMail() {
-//               let mail = MFMailComposeViewController()
-//               mail.mailComposeDelegate = self
-//               mail.setToRecipients(["you@yoursite.com"])
-//               mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-//
-//               present(mail, animated: true)
-//           } else {
-//               // show failure alert
-//           }
-//    }
+    func presentEmailComposeView(for email: String) throws {
+        if MFMailComposeViewController.canSendMail() {
+               let mail = MFMailComposeViewController()
+               mail.mailComposeDelegate = self
+               mail.setToRecipients([email])
+               mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+
+            viewController?.present(mail, animated: true)
+           } else {
+               throw RandomUserError.generic(description: "Can't send email")
+           }
+    }
+    
+    func displayAlertWith(_ title: String, _ message: String, buttonTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: buttonTitle, style: .default)
+        
+        alert.addAction(action)
+        viewController?.present(alert, animated: true)
+    }
 }
 
+extension UserDetailsRouter: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        viewController?.dismiss(animated: true)
+    }
+}

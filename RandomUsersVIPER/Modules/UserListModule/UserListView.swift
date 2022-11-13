@@ -10,6 +10,7 @@ import SwiftUI
 
 struct UserListView<Presenter>: View where Presenter: UserListPresentable {
     @ObservedObject var presenter: Presenter
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         switch presenter.state {
@@ -20,7 +21,7 @@ struct UserListView<Presenter>: View where Presenter: UserListPresentable {
                         presenter.tappedOn(user)
                     } label: {
                         Text(user.name.fullName)
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                     }
                 }
             }

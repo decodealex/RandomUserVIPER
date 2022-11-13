@@ -57,6 +57,8 @@ class UserListRouter: UserListRoutable {
     }
     
     func presentUserDetailsSheet(for user: User) {
+        viewController?.dismiss(animated: true)
+        
         let destinationVC = UserDetailsRouter.buildModule(for: user)
         if let sheet = destinationVC.sheetPresentationController {
              sheet.detents = [.medium(), .large()]

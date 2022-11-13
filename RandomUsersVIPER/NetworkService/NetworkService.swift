@@ -28,7 +28,6 @@ extension NetworkService: NetworkServiceProtocol {
     
     public func request(urlSession: URLSession, endpoint: Endpoint) async throws -> Data {
         let request = try endpoint.buildURLRequest()
-        print("❗️DEBUG: \(request.url) ")
 
         let (data, response) = try await urlSession.data(for: request)
         try handleResponse(data, response: response)

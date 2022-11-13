@@ -41,5 +41,6 @@ protocol UserDetailsInteractableOutput: AnyObject {
 protocol UserDetailsRoutable: AnyObject {
     var viewController: UIViewController? { get }
     
-
+    func presentEmailComposeView(for email: String) throws
+    func displayAlertWith(_ title: String, _ message: String, buttonTitle: String)
 }

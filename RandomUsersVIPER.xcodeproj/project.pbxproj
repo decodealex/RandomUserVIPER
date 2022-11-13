@@ -42,6 +42,9 @@
 		5263BDBD2920BC9C00640BF3 /* FormInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDBC2920BC9C00640BF3 /* FormInfoRow.swift */; };
 		5263BDC02920C0F000640BF3 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDBF2920C0F000640BF3 /* ErrorView.swift */; };
 		5263BDC32920C34700640BF3 /* LinkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDC22920C34700640BF3 /* LinkButton.swift */; };
+		5263BDF229219E0800640BF3 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDEF29219E0800640BF3 /* StoryboardLoadable.swift */; };
+		5263BDF329219E0800640BF3 /* DataInteractable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDF029219E0800640BF3 /* DataInteractable.swift */; };
+		5263BDF429219E0800640BF3 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BDF129219E0800640BF3 /* UIStoryboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		5263BDBC2920BC9C00640BF3 /* FormInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormInfoRow.swift; sourceTree = "<group>"; };
 		5263BDBF2920C0F000640BF3 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		5263BDC22920C34700640BF3 /* LinkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkButton.swift; sourceTree = "<group>"; };
+		5263BDEF29219E0800640BF3 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
+		5263BDF029219E0800640BF3 /* DataInteractable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataInteractable.swift; sourceTree = "<group>"; };
+		5263BDF129219E0800640BF3 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,7 @@
 		5263BD45291EF72300640BF3 /* RandomUsersVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				5263BDED29219DF500640BF3 /* Utilities */,
 				5263BDA829209E1B00640BF3 /* Views */,
 				5263BDA429207FC600640BF3 /* Core */,
 				5263BDA32920779F00640BF3 /* Modules */,
@@ -341,6 +348,24 @@
 			path = Mod;
 			sourceTree = "<group>";
 		};
+		5263BDED29219DF500640BF3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5263BDEE29219DFC00640BF3 /* Exstensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5263BDEE29219DFC00640BF3 /* Exstensions */ = {
+			isa = PBXGroup;
+			children = (
+				5263BDF029219E0800640BF3 /* DataInteractable.swift */,
+				5263BDEF29219E0800640BF3 /* StoryboardLoadable.swift */,
+				5263BDF129219E0800640BF3 /* UIStoryboard.swift */,
+			);
+			path = Exstensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -482,10 +507,12 @@
 				5263BDB22920AAF600640BF3 /* UserDetailsContract.swift in Sources */,
 				5263BDB72920AAF600640BF3 /* UserDetailsView.swift in Sources */,
 				5263BDB52920AAF600640BF3 /* UserDetailsData.swift in Sources */,
+				5263BDF429219E0800640BF3 /* UIStoryboard.swift in Sources */,
 				5263BD8F292065B700640BF3 /* JSONDecoder.swift in Sources */,
 				5263BDA729207FD300640BF3 /* AppRouter.swift in Sources */,
 				5263BD47291EF72300640BF3 /* AppDelegate.swift in Sources */,
 				5263BD7D2920645000640BF3 /* UserListContract.swift in Sources */,
+				5263BDF329219E0800640BF3 /* DataInteractable.swift in Sources */,
 				5263BD7F2920645000640BF3 /* UserListRouter.swift in Sources */,
 				5263BD7E2920645000640BF3 /* UserListPresenter.swift in Sources */,
 				5263BDB42920AAF600640BF3 /* UserDetailsRouter.swift in Sources */,
@@ -493,6 +520,7 @@
 				5263BDB32920AAF600640BF3 /* UserDetailsPresenter.swift in Sources */,
 				5263BDAA29209F6300640BF3 /* DisclosureIndicatorRow.swift in Sources */,
 				5263BDBA2920B9C300640BF3 /* UserDetailRowModel.swift in Sources */,
+				5263BDF229219E0800640BF3 /* StoryboardLoadable.swift in Sources */,
 				5263BD88292064B100640BF3 /* NetworkError.swift in Sources */,
 				5263BD9F29206C7200640BF3 /* UserRepository.swift in Sources */,
 				5263BD8A292064D900640BF3 /* NetworkService.swift in Sources */,
@@ -598,7 +626,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -652,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
