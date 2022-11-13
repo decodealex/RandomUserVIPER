@@ -28,13 +28,11 @@ protocol UserListInteractableInput: AnyObject {
     var output: UserListInteractableOutput! { get }
     
     func getUsers()
-
 }
 
 /// Handles data response transfer
 protocol UserListInteractableOutput: AnyObject {
     func received(_ users: [User])
-
 }
 
 /// Handles navigation

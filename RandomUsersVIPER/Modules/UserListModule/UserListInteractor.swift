@@ -25,7 +25,7 @@ class UserListInteractor: UserListInteractableInput {
                 output.received(users)
                 print("❗️DEBUG: \(users) ")
             } catch {
-                //TO DO notify about error
+                //TO DO notify user about error
                 print("❗️DEBUG: \(error.localizedDescription) ")
             }
         }

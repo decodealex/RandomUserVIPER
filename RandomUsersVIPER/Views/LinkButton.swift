@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct LinkButton: View {
-    
     var title: String
     var callback: () -> Void
     

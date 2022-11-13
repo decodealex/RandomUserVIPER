@@ -34,9 +34,7 @@ final class UserListPresenter: UserListPresentable, UserListInteractableOutput {
         interactor.getUsers()
     }
     
-    func viewDidAppear() {
-        
-    }
+    func viewDidAppear() {}
     
     func received(_ users: [User]) {
         DispatchQueue.main.async {
@@ -56,8 +54,4 @@ final class UserListPresenter: UserListPresentable, UserListInteractableOutput {
         }
     }
     
-}
-
-enum UserListViewState {
-    case loaded, loading, error
 }

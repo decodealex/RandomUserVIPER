@@ -11,7 +11,7 @@ import SwiftUI
 struct UserListView<Presenter>: View where Presenter: UserListPresentable {
     @ObservedObject var presenter: Presenter
     @Environment(\.colorScheme) var colorScheme
-
+    
     var body: some View {
         switch presenter.state {
         case .loaded:
@@ -34,7 +34,7 @@ struct UserListView<Presenter>: View where Presenter: UserListPresentable {
         case .error:
             ErrorView()
         }
-	}
+    }
 }
 
 struct UserListView_Previews: PreviewProvider {

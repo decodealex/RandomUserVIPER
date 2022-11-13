@@ -28,15 +28,13 @@ final class UserDetailsPresenter: UserDetailsPresentable, UserDetailsInteractabl
             self.objectWillChange.send()
         }
     }
-
+    
     func viewDidLoad() {
         interactor.getUser()
         interactor.getRows()
     }
     
-    func viewDidAppear() {
-        
-    }
+    func viewDidAppear() { }
     
     func receivedUser(_ user: User) {
         self.user = user

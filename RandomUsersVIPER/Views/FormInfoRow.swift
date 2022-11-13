@@ -20,7 +20,6 @@ struct FormInfoRow: View {
     }
 }
 
-
 struct FormInfoRow_Previews: PreviewProvider {
     static var previews: some View {
         FormInfoRow(title: "Title", value: "Value")
