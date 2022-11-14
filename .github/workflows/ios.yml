@@ -17,5 +17,3 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_14.1.app
     - name: Run tests
       run: xcodebuild clean test -scheme "RandomUsersVIPER" -destination "platform=iOS Simulator,name=iPhone 13 Pro Max,OS=latest"
-    - name: Build App
-      run: xcodebuild  -scheme "RandomUsersVIPER" -destination "generic/platform=iOS" 
