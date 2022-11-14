@@ -16,4 +16,4 @@ jobs:
     - name: Force Xcode 14
       run: sudo xcode-select -switch /Applications/Xcode_14.1.app
     - name: Run tests
-      run: xcodebuild clean test -scheme "RandomUsersVIPER" -destination "platform=iOS Simulator,name=iPhone 13 Pro Max,OS=latest"
+      run: xcodebuild test -scheme "RandomUsersVIPER" -destination "platform=iOS Simulator,name=iPhone 13 Pro Max,OS=latest"
