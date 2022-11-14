@@ -40,6 +40,18 @@
 		5263BE0A2921AB0400640BF3 /* UserListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE092921AB0400640BF3 /* UserListViewState.swift */; };
 		5263BE0C2921B08A00640BF3 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE0B2921B08A00640BF3 /* JSONDecoder.swift */; };
 		5263BE0F2921B5AE00640BF3 /* RandomUserNetworkService in Frameworks */ = {isa = PBXBuildFile; productRef = 5263BE0E2921B5AE00640BF3 /* RandomUserNetworkService */; };
+		5263BE2A2921C2CE00640BF3 /* XCTest+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE292921C2CE00640BF3 /* XCTest+JSON.swift */; };
+		5263BE2C2921C2F700640BF3 /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5263BE2B2921C2F700640BF3 /* users.json */; };
+		5263BE2E2921C32500640BF3 /* JSONMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE2D2921C32500640BF3 /* JSONMappingTests.swift */; };
+		5263BE312921C40700640BF3 /* TestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE302921C40700640BF3 /* TestError.swift */; };
+		5263BE372921C47500640BF3 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE362921C47500640BF3 /* MockNetworkService.swift */; };
+		5263BE392921C4CD00640BF3 /* MockUserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE382921C4CD00640BF3 /* MockUserRemoteDataSource.swift */; };
+		5263BE3B2921C52000640BF3 /* MockUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE3A2921C52000640BF3 /* MockUsers.swift */; };
+		5263BE3E2921C6E900640BF3 /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE3D2921C6E900640BF3 /* MockUserRepository.swift */; };
+		5263BE402921CAD000640BF3 /* UserDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE3F2921CAD000640BF3 /* UserDataSourceTests.swift */; };
+		5263BE442921D8C600640BF3 /* UserListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE432921D8C600640BF3 /* UserListPresenterTests.swift */; };
+		5263BE472921D96300640BF3 /* MockUserListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE462921D96300640BF3 /* MockUserListRouter.swift */; };
+		5263BE492921DBA900640BF3 /* MockUserListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5263BE482921DBA900640BF3 /* MockUserListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +108,18 @@
 		5263BDF129219E0800640BF3 /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		5263BE092921AB0400640BF3 /* UserListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewState.swift; sourceTree = "<group>"; };
 		5263BE0B2921B08A00640BF3 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
+		5263BE292921C2CE00640BF3 /* XCTest+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+JSON.swift"; sourceTree = "<group>"; };
+		5263BE2B2921C2F700640BF3 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		5263BE2D2921C32500640BF3 /* JSONMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMappingTests.swift; sourceTree = "<group>"; };
+		5263BE302921C40700640BF3 /* TestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestError.swift; sourceTree = "<group>"; };
+		5263BE362921C47500640BF3 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		5263BE382921C4CD00640BF3 /* MockUserRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRemoteDataSource.swift; sourceTree = "<group>"; };
+		5263BE3A2921C52000640BF3 /* MockUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsers.swift; sourceTree = "<group>"; };
+		5263BE3D2921C6E900640BF3 /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		5263BE3F2921CAD000640BF3 /* UserDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSourceTests.swift; sourceTree = "<group>"; };
+		5263BE432921D8C600640BF3 /* UserListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPresenterTests.swift; sourceTree = "<group>"; };
+		5263BE462921D96300640BF3 /* MockUserListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListRouter.swift; sourceTree = "<group>"; };
+		5263BE482921DBA900640BF3 /* MockUserListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +188,12 @@
 		5263BD5C291EF72500640BF3 /* RandomUsersVIPERTests */ = {
 			isa = PBXGroup;
 			children = (
+				5263BE412921D64200640BF3 /* Modules */,
+				5263BE322921C42D00640BF3 /* Model */,
+				5263BE2F2921C3F400640BF3 /* Utilities */,
+				5263BE162921BEF700640BF3 /* CoreTests */,
+				5263BE132921BEA400640BF3 /* Test Data */,
+				5263BE102921BE4D00640BF3 /* Extensions */,
 				5263BD5D291EF72500640BF3 /* RandomUsersVIPERTests.swift */,
 			);
 			path = RandomUsersVIPERTests;
@@ -318,6 +348,100 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5263BE102921BE4D00640BF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE292921C2CE00640BF3 /* XCTest+JSON.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5263BE132921BEA400640BF3 /* Test Data */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE2B2921C2F700640BF3 /* users.json */,
+			);
+			path = "Test Data";
+			sourceTree = "<group>";
+		};
+		5263BE162921BEF700640BF3 /* CoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE2D2921C32500640BF3 /* JSONMappingTests.swift */,
+			);
+			path = CoreTests;
+			sourceTree = "<group>";
+		};
+		5263BE2F2921C3F400640BF3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE302921C40700640BF3 /* TestError.swift */,
+				5263BE362921C47500640BF3 /* MockNetworkService.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5263BE322921C42D00640BF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE332921C44300640BF3 /* Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5263BE332921C44300640BF3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE342921C44A00640BF3 /* User */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5263BE342921C44A00640BF3 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE352921C45800640BF3 /* MockObjects */,
+				5263BE3F2921CAD000640BF3 /* UserDataSourceTests.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		5263BE352921C45800640BF3 /* MockObjects */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE382921C4CD00640BF3 /* MockUserRemoteDataSource.swift */,
+				5263BE3A2921C52000640BF3 /* MockUsers.swift */,
+				5263BE3D2921C6E900640BF3 /* MockUserRepository.swift */,
+			);
+			path = MockObjects;
+			sourceTree = "<group>";
+		};
+		5263BE412921D64200640BF3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE422921D64B00640BF3 /* UserListModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5263BE422921D64B00640BF3 /* UserListModule */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE452921D94300640BF3 /* MockObjects */,
+				5263BE432921D8C600640BF3 /* UserListPresenterTests.swift */,
+			);
+			path = UserListModule;
+			sourceTree = "<group>";
+		};
+		5263BE452921D94300640BF3 /* MockObjects */ = {
+			isa = PBXGroup;
+			children = (
+				5263BE462921D96300640BF3 /* MockUserListRouter.swift */,
+				5263BE482921DBA900640BF3 /* MockUserListInteractor.swift */,
+			);
+			path = MockObjects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,6 +561,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5263BE2C2921C2F700640BF3 /* users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +613,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5263BE312921C40700640BF3 /* TestError.swift in Sources */,
+				5263BE472921D96300640BF3 /* MockUserListRouter.swift in Sources */,
+				5263BE392921C4CD00640BF3 /* MockUserRemoteDataSource.swift in Sources */,
+				5263BE2E2921C32500640BF3 /* JSONMappingTests.swift in Sources */,
+				5263BE372921C47500640BF3 /* MockNetworkService.swift in Sources */,
+				5263BE3E2921C6E900640BF3 /* MockUserRepository.swift in Sources */,
+				5263BE442921D8C600640BF3 /* UserListPresenterTests.swift in Sources */,
+				5263BE492921DBA900640BF3 /* MockUserListInteractor.swift in Sources */,
+				5263BE2A2921C2CE00640BF3 /* XCTest+JSON.swift in Sources */,
+				5263BE402921CAD000640BF3 /* UserDataSourceTests.swift in Sources */,
 				5263BD5E291EF72500640BF3 /* RandomUsersVIPERTests.swift in Sources */,
+				5263BE3B2921C52000640BF3 /* MockUsers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
